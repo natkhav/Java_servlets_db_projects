@@ -32,7 +32,7 @@ public class Search extends HttpServlet {
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/product","root","");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/product","root","password");
 
             Statement statement = conn.createStatement();
 			ResultSet resSet = statement.executeQuery("select * from product where productId = " + productId + "");
